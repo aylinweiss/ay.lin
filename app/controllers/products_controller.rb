@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
+  
+  before_action :authenticate_user!, except: [:index, :show, :home]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_product_identification, only: [ :edit, :update, :destroy]
+  
   # GET /products
   # GET /products.json
   def index
@@ -24,9 +27,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(product_params)
-
-    respond_to do |format|
+      @prodct = current_user.products.new(product_params)
+      respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render action: 'show', status: :created, location: @product }
@@ -66,12 +68,17 @@ class ProductsController < ApplicationController
   
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
+     def set_product
+       @product = Product.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:name, :image, :prise, :desciption)
+
+    def set_product_identification
+          @product = Product.find(params[:id])
+          if @product.user_id != current_user.id
+            redirect_to product_path, alert: 'You can edit oder delete only your own Products.'
+          end
     end
+
+
 end
