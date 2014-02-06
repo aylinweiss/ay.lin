@@ -11,14 +11,14 @@ Ausführliche Beschreibung / Beschreibung des Projekts
 Problemstellung: Bei selbst gebastelten Gegenständen kann man nur schwer Preise festlegen. 
 
 Beschreibung der technischen Umsetzung
-Die User sollen Ihre selbst gebastelten Gegenstände mit Hilfe eines Bildes Uploaden auf die Seite Laden. Anschließend können Registrierte Personen diese Gegenstände Preislich Bewerten. Auch können Registrierte Personen diese Gegenstände zum Bewerteten Preis von der Seite erwerben. Die Person die den jeweiligen Gegenstand eingestellt hat wird über das Kaufangebot informiert und kann diesen bestätigen oder ablehnen.
+Die User sollen Ihre selbst gebastelten Gegenstände mit Hilfe eines Bildes Uploaden auf die Seite Laden. Anschließend können Registrierte Personen diese Gegenstände Preislich Bewerten. Auch können Registrierte Personen diese Gegenstände zum Bewerteten Preis bzw zu einem bestimmten Wert von der Seite erwerben. Die Person die den jeweiligen Gegenstand eingestellt hat wird über das Kaufangebot informiert und kann diesen bestätigen oder ablehnen.
 
 Funktionalität:
 Kunden Login
 Verkaufen Upload von Bildern
 Rating
 Kaufen
-Kategorisierung
+
 
 Probleme:
 Verständnisprobleme --> aufgrund zum Vergleich von Java Programmierung

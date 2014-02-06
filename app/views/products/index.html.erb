@@ -23,7 +23,9 @@
     <% @products.each do |product| %>
       <tr>
         <td width = '30%'><%= product.name %></td>
-        <td><%= product.image %></td>
+        <td><a class="menue">
+              <%= image_tag product.image_url(:thumb) if product.image? %>
+              <span><%= image_tag product.image_url(:normal)  if product.image? %></span></a>
         <td><%= product.prise %></td>
         <td><%= product.desciption %></td>
         <td> <%= product.user.username %> </td>
