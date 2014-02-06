@@ -1,28 +1,41 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projekt-Name: Ay.lin
 
-Things you may want to cover:
+Vor- und Nachnamen und Matrikel-Nummern der Team-Mitglieder: 
+Aylin Weiß 327673
+Patrick Dzielinski 325141
 
-* Ruby version
+Ausführliche Beschreibung / Beschreibung des Projekts
 
-* System dependencies
+Problemstellung: Bei selbst gebastelten Gegenständen kann man nur schwer Preise festlegen. 
 
-* Configuration
+Beschreibung der technischen Umsetzung
+Die User sollen Ihre selbst gebastelten Gegenstände mit Hilfe eines Bildes Uploaden auf die Seite Laden. Anschließend können Registrierte Personen diese Gegenstände Preislich Bewerten. Auch können Registrierte Personen diese Gegenstände zum Bewerteten Preis von der Seite erwerben. Die Person die den jeweiligen Gegenstand eingestellt hat wird über das Kaufangebot informiert und kann diesen bestätigen oder ablehnen.
 
-* Database creation
+Funktionalität:
+Kunden Login
+Verkaufen Upload von Bildern
+Rating
+Kaufen
+Kategorisierung
 
-* Database initialization
+Probleme:
+Verständnisprobleme --> aufgrund zum Vergleich von Java Programmierung
+Datebankschema--> neuanlegung
+Upload --> vorerst die Bilder in die Datenbank ohne Scaffold angelegt anschließend neu aufsetzen des Produkt Entitytypens Bild anzeigen ist weiterhin ein Problem beim Upload
+Rating--> Funktion konnte nicht erstellt werden
+Generell--> Zeitknappheit
 
-* How to run the test suite
+Authentifikation und Autorisierung gemäß ihren Projekt-Anforderungen:
+Nur Registriert und angemeldete Personen können Verkaufen, Bewerten und Kaufen. Nicht angemeldete Personen können die Bilder sich ansehen.
+Passworte werden über divise verschlüsselt.
 
-* Services (job queues, cache servers, search engines, etc.)
+Tests (Unit und Functional Tests)
+Die Funktion Anmelden Funktioniert.
+Sowie die Funktion des Abmeldens und der Registration.
+Auch ist es möglich Bilder Hochzuladen und diese zu benennen und zu Löschen.
+Buttons Funktionieren auch.
 
-* Deployment instructions
+....es ist noch viel zu tun :-P
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
