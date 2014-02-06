@@ -1,6 +1,6 @@
 AyLin::Application.routes.draw do
   resources :products
-  root 'products#index'
+  root 'products#home'
 
   get 'products/home'
   # The priority is based upon order of creation: first created -> highest priority.
