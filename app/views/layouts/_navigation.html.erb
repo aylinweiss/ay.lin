@@ -16,11 +16,25 @@
       <ul class="nav navbar-nav">
 	      <li class="link"><%= link_to "Kaufen", products_path %></li>
 	      <li class="link"><%= link_to "Verkaufen", new_product_path %></li>
-    
-	     
-        
-      </ul>
+     </ul>
 
+     <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+        </li>
+        <li>
+          <%= link_to 'Edit account', edit_user_registration_path %>
+        </li>
+         <% else %>
+        <li>
+          <%= link_to 'Login', new_user_session_path %>
+        </li>
+        <li>
+          <%= link_to 'Sign up', new_user_registration_path %>
+        </li>
+      <% end %>
+      </ul>
       
       
     </div>
