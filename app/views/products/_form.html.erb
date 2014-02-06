@@ -1,4 +1,5 @@
-<%= form_for(@product) do |f| %>
+<%= form_for(@product, :html => {:multipart => true}) do |f| %>
+
   <% if @product.errors.any? %>
     <div class="panel panel-danger">
       <div class="panel-heading">
@@ -18,10 +19,7 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
-  </div>
+
   <div class="field">
     <%= f.label :prise %><br>
     <%= f.text_field :prise %>
@@ -29,7 +27,10 @@
   <div class="field">
     <%= f.label :desciption %><br>
     <%= f.text_field :desciption %>
-  </div>
+  </div>  <div class="field">
+  <%= f.file_field :image %>
+</div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-      @prodct = current_user.products.new(product_params)
+      @product = current_user.products.new(product_params)
       respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -64,6 +64,7 @@ class ProductsController < ApplicationController
   end
   
   def home
+    @products = Product.all
   end
   
   private
@@ -81,7 +82,7 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:name, :image, :prise, :description, :user_id)
+      params.require(:product).permit(:name, :image, :prise, :description, :user_id, :remote_image_url)
     end
 end
 

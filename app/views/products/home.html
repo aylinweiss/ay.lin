@@ -1,1 +1,33 @@
-<h1>Home</h1>
+<div class="jumbotron">
+
+<h2> Hier kannst Du deine selbst gebastelten Sachen hochladen!</h2>
+<p class="lead">
+    Dafür brauchst Du dich nur anzumelden
+</p>
+<%= link_to "Jetzt Anmelden", new_user_session_path , class: "btn btn-lg btn-success" %>
+
+<br><br>
+
+<div class="row">
+
+  <div class="col-md-3 portfolio-item">
+      <a href="portfolio-item.html">
+          <img class="img-responsive" src="http://placehold.it/750x450">
+      </a>
+  </div>
+
+  <% @products.each do |product| %>
+<div class="col-md-3">
+    <div class="thumbnail", id="thumb">
+        <td><%= image_tag product.image_url(:thumb) if product.image? %></td>
+                
+    </div>
+</div>
+<% end %> 
+
+
+
+</div>
+
+
+</div>
