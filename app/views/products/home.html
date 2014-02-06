@@ -1,11 +1,13 @@
 <div class="jumbotron">
-
-<h2> Hier kannst Du deine selbst gebastelten Sachen hochladen!</h2>
-<p class="lead">
-    Dafür brauchst Du dich nur anzumelden
-</p>
-<%= link_to "Jetzt Anmelden", new_user_session_path , class: "btn btn-lg btn-success" %>
-
+<% if current_user.present? %>
+	<h3>Willkommen</h3>
+	<% else %>
+	<h2> Hier kannst Du deine selbst gebastelten Sachen hochladen!</h2>
+	<p class="lead">
+	    Dafür brauchst Du dich nur anzumelden
+	</p>
+	<%= link_to "Jetzt Anmelden", new_user_session_path , class: "btn btn-primary" %>
+<% end %>
 <br><br>
 
 <div class="row">
@@ -17,13 +19,12 @@
   </div>
 
   <% @products.each do |product| %>
-<div class="col-md-3">
-    <div class="thumbnail", id="thumb">
-        <td><%= image_tag product.image_url(:thumb) if product.image? %></td>
-                
-    </div>
-</div>
-<% end %> 
+	<div class="col-md-3">
+	    <div class="thumbnail", id="thumb">
+	        <td><%= image_tag product.image_url(:thumb) if product.image? %></td>
+	    </div>
+	</div>
+	<% end %> 
 
 
 
