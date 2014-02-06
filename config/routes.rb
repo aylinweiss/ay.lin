@@ -1,6 +1,8 @@
 AyLin::Application.routes.draw do
   devise_for :users
   resources :products
+  resources :users
+
   root 'products#home'
 
   get 'products/home'
