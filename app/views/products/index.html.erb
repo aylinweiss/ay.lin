@@ -29,11 +29,11 @@
         <td><%= product.prise %></td>
         <td><%= product.desciption %></td>
         <td> <%= product.user.username %> </td>
-        <td><%= link_to 'Zeigen', product, class: "btn btn-success btn-sm" %></td>
-        <td><%= link_to 'Ändern', edit_product_path(product),class: "btn btn-warning  btn-sm" %>
+        <td><%= link_to 'Zeigen', product, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Ändern', edit_product_path(product),class: "btn btn-primary" %>
 
         </td>
-        <td><%= link_to 'Löschen', product, class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Möchten Sie wirklich ihr Produkt löschen?' } %></td>
+        <td><%= link_to 'Löschen', product, class: "btn btn-primary", method: :delete, data: { confirm: 'Möchten Sie wirklich ihr Produkt löschen?' } %></td>
       </tr>
     <% end %>
   </tbody>
