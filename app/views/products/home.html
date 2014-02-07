@@ -1,7 +1,7 @@
 
 <div class="jumbotron">
 <% if current_user.present? %>
-	<h3>Willkommen</h3>
+	<h3><%= link_to "Willkommen " + current_user.username, edit_user_registration_path %></h3>
 	<% else %>
 	<h2> Hier kannst Du deine selbst gebastelten Sachen hochladen!</h2>
 	<p class="lead">

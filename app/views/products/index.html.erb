@@ -13,6 +13,7 @@
       <th>Prise</th>
       <th>Desciption</th>
       <th>User</th>
+      <th>Rating</th>
       <th></th>
       <th></th>
       <th></th>
@@ -29,6 +30,14 @@
         <td><%= product.prise %></td>
         <td><%= product.desciption %></td>
         <td> <%= product.user.username %> </td>
+
+    <td><div class="rating">
+    <span>★5</span> 
+    <span>★4</span> 
+    <span>★3</span> 
+    <span>★2</span> 
+    <span>★1</span> 
+    </div></td>
         <td><%= link_to 'Zeigen', product, class: "btn btn-primary" %></td>
         <td><%= link_to 'Ändern', edit_product_path(product),class: "btn btn-primary" %>
 
